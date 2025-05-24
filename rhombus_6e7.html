@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grille SVG 9x5</title>
+ <style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #1e1e1e;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr); /* grille 9 colonnes sur desktop */
+    column-gap: 0px;  /* écart horizontal entre les colonnes */
+    row-gap: 50px;     /* écart vertical entre les lignes */
+    padding: 40px;
+    box-sizing: border-box;
+  }
+
+
+  .image-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .image-wrapper img {
+    width: 100%;
+    max-width: 120px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+
+  .image-wrapper img:hover {
+    transform: scale(1.05);
+  }
+
+
+  .tooltip {
+    position: absolute;
+    background-color: #1e1e1e; /* gris très foncé */
+    color: #ffffff;
+    padding: 8px 12px;
+    border: 1px solid #555;
+    border-radius: 8px;
+    font-size: 15px;
+    white-space: nowrap;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.3);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+    z-index: 10;
+    line-height: 1.8; /* Espacement entre lignes */
+  }
+
+  .tooltip .numero {
+    font-weight: bold;
+  }
+
+  .tooltip.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .tooltip.right {
+    left: 95%;
+  }
+
+  .tooltip.left {
+    right: 95%;
+  }
+</style>
+
+</head>
+<body>
+  <div class="grid">
+    <!-- 43 images avec infobulles -->
+    <!-- Ligne 1 -->
+    <div class="image-wrapper"><img src="rhombus svg/rhombus_001.svg">
+      <div class="tooltip">
+        <div class="numero">Numéro 1</div><div class="decouvreurs">Sofia & Lola R.</div>
+      </div>
+    </div>
+    <div class="image-wrapper"><img src="rhombus svg/rhombus_002.svg">
+      <div class="tooltip">
+        <div class="numero">Numéro 2</div><div class="decouvreurs">Kalidou, Issam, Léo</div>
+      </div>
+    </div>
+    <div class="image-wrapper"><img src="rhombus svg/rhombus_003.svg">
+      <div class="tooltip">
+        <div class="numero">Numéro 3</div><div class="decouvreurs">Dalil & Nathan</div>
+      </div>
+    </div>
+    <div class="image-wrapper"><img src="rhombus svg/rhombus_000.svg"><div class="tooltip">Numéro 4</div></div>
+    <div class="image-wrapper"><img src="rhombus svg/rhombus_005.svg">
+      <div class="tooltip">
+        <div class="numero">Numéro 5</div><div class="decouvreurs">Axelle, Jana & Laura</div>
+      </div>
+    </div>
+    <div class="image-wrapper"><img src="rhombus svg/rhombus_000.svg"><div class="tooltip">Numéro 6</div></div>
+    <div class="image-wrapper"><img src="rhombus svg/rhombus_007.svg">
+      <div class="tooltip">
+        <div class="numero">Numéro 7</div><div class="decouvreurs">Jana & Laura</div>
+      </div>
+    </div>
+    <div class="image-wrapper"><img src="rhombus svg/rhombus_008.svg">
+      <div class="tooltip">
+        <div class="numero">Numéro 8</div><div class="decouvreurs">Axel, Dalil & Nathan</div>
+      </div>
+    </div>
+    <div class="image-wrapper"><img src="rhombus svg/rhombus_009.svg">
+      <div class="tooltip">
+        <div class="numero">Numéro 9</div><div class="decouvreurs">Baptiste, Enguerrand, Gabriel B.</div>
+      </div>
+    </div>
+
+    <!-- Ligne 2 -->
+    <div class="image-wrapper"><img src="rhombus svg/rhombus_010.svg">
+      <div class="tooltip">
+        <div class="numero">Numéro 10</div><div class="decouvreurs">Baptiste, Enguerrand, Gabriel B.</div>
+      </div>
+    </div>
+    <div class="image-wrapper"><img src="rhombus svg/rhombus_011.svg">
+      <div class="tooltip">
+        <div class="numero">Numéro 11</div><div class="decouvreurs">Arthur & Gabriel M.</div>
+      </div>
+    </div>
+    <div class="image-wrapper"><img src="rhombus svg/rhombus_012.svg">
+      <div class="tooltip">
+        <div class="numero">Numéro 12</div><div class="decouvreurs">Arthur & Gabriel M.</div>
+      </div>
+    </div>
+    <div class="image-wrapper"><img src="rhombus svg/rhombus_013.svg">
+      <div class="tooltip">
+        <div class="numero">Numéro 13</div><div class="decouvreurs">Jana & Laura</div>
+      </div>
+    </div>
+    <div class="image-wrapper"><img src="rhombus svg/rhombus_014.svg">
+      <div class="tooltip">
+        <div class="numero">Numéro 14</div><div class="decouvreurs">Arthur & Gabriel M.</div>
+      </div>
+    </div>
+
+    <div class="image-wrapper"><img src="rhombus svg/rhombus_015.svg">
+      <div class="tooltip">
+        <div class="numero">Numéro 15</div><div class="decouvreurs">Baptiste, Enguerrand, Gabriel B.</div>
+      </div>
+    </div>
+    <div class="image-wrapper"><img src="rhombus svg/rhombus_016.svg">
+      <div class="tooltip">
+        <div class="numero">Numéro 16</div><div class="decouvreurs">Arthur & Gabriel M.</div>
+      </div>
+    </div>
+    <div class="image-wrapper"><img src="rhombus svg/rhombus_000.svg"><div class="tooltip">Numéro 17</div></div>
+    <div class="image-wrapper"><img src="rhombus svg/rhombus_000.svg"><div class="tooltip">Numéro 18</div></div>
+
+    <!-- Ligne 3 -->
+    <div class="image-wrapper"><img src="rhombus svg/rhombus_000.svg"><div class="tooltip">Numéro 19</div></div>
+    <div class="image-wrapper"><img src="rhombus svg/rhombus_000.svg"><div class="tooltip">Numéro 20</div></div>
+    <div class="image-wrapper"><img src="rhombus svg/rhombus_021.svg">
+      <div class="tooltip">
+        <div class="numero">Numéro 21</div><div class="decouvreurs">Jana, Laura</div>
+      </div>
+    </div>
+    <div class="image-wrapper"><img src="rhombus svg/rhombus_000.svg"><div class="tooltip">Numéro 22</div></div>
+    <div class="image-wrapper"><img src="rhombus svg/rhombus_000.svg"><div class="tooltip">Numéro 23</div></div>
+    <div class="image-wrapper"><img src="rhombus svg/rhombus_000.svg"><div class="tooltip">Numéro 24</div></div>
+    <div class="image-wrapper"><img src="rhombus svg/rhombus_000.svg"><div class="tooltip">Numéro 25</div></div>
+    <div class="image-wrapper"><img src="rhombus svg/rhombus_026.svg">
+      <div class="tooltip">
+        <div class="numero">Numéro 26</div><div class="decouvreurs">Baptiste, Enguerrand & Gabriel B.</div>
+      </div>
+    </div>
+    <div class="image-wrapper"><img src="rhombus svg/rhombus_027.svg">
+      <div class="tooltip">
+        <div class="numero">Numéro 27</div><div class="decouvreurs">Dorine & Axelle</div>
+      </div>
+    </div>
+
+    <!-- Ligne 4 -->
+    <div class="image-wrapper"><img src="rhombus svg/rhombus_028.svg">
+      <div class="tooltip">
+        <div class="numero">Numéro 28</div><div class="decouvreurs">Jana & Laura</div>
+      </div>
+    </div>
+    <div class="image-wrapper"><img src="rhombus svg/rhombus_029.svg">
+      <div class="tooltip">
+        <div class="numero">Numéro 29</div><div class="decouvreurs">Kim, Liliana & Lola M.</div>
+      </div>
+    </div>
+    <div class="image-wrapper"><img src="rhombus svg/rhombus_030.svg">
+      <div class="tooltip">
+        <div class="numero">Numéro 30</div><div class="decouvreurs">Chloé & Lola R.</div>
+      </div>
+    </div>
+    <div class="image-wrapper"><img src="rhombus svg/rhombus_000.svg"><div class="tooltip">Numéro 31</div></div>
+    <div class="image-wrapper"><img src="rhombus svg/rhombus_000.svg"><div class="tooltip">Numéro 32</div></div>
+    <div class="image-wrapper"><img src="rhombus svg/rhombus_000.svg"><div class="tooltip">Numéro 33</div></div>
+    <div class="image-wrapper"><img src="rhombus svg/rhombus_034.svg">
+      <div class="tooltip">
+        <div class="numero">Numéro 34</div><div class="decouvreurs">Sofia & Louane</div>
+      </div>
+    </div>
+    <div class="image-wrapper"><img src="rhombus svg/rhombus_035.svg">
+      <div class="tooltip">
+        <div class="numero">Numéro 35</div><div class="decouvreurs">Jana & Laura</div>
+      </div>
+    </div>
+    <div class="image-wrapper"><img src="rhombus svg/rhombus_000.svg"><div class="tooltip">Numéro 36</div></div>
+
+    <!-- Ligne 5 -->
+    <div class="image-wrapper"><img src="rhombus svg/rhombus_037.svg">
+      <div class="tooltip">
+        <div class="numero">Numéro 37</div><div class="decouvreurs">Baptiste, Enguerrand & Gabriel B.</div>
+      </div>
+    </div>
+    <div class="image-wrapper"><img src="rhombus svg/rhombus_000.svg"><div class="tooltip">Numéro 38</div></div>
+    <div class="image-wrapper"><img src="rhombus svg/rhombus_039.svg">
+      <div class="tooltip">
+        <div class="numero">Numéro 39</div><div class="decouvreurs">Chloé, Lola R.</div>
+      </div>
+    </div>
+    <div class="image-wrapper"><img src="rhombus svg/rhombus_040.svg">
+      <div class="tooltip">
+        <div class="numero">Numéro 40</div><div class="decouvreurs">Baptiste, Enguerrand & Gabriel B.</div>
+      </div>
+    </div>
+    <div class="image-wrapper"><img src="rhombus svg/rhombus_041.svg">
+      <div class="tooltip">
+        <div class="numero">Numéro 41</div><div class="decouvreurs">Liam & Léonor</div>
+      </div>
+    </div>
+    <div class="image-wrapper"><img src="rhombus svg/rhombus_042.svg">
+      <div class="tooltip">
+        <div class="numero">Numéro 42</div><div class="decouvreurs">Kim, Liliana & Lola M.</div>
+      </div>
+    </div>
+    <div class="image-wrapper"><img src="rhombus svg/rhombus_043.svg">
+      <div class="tooltip">
+        <div class="numero">Numéro 43</div><div class="decouvreurs">Kim, Liliana & Lola M.</div>
+      </div>
+    </div>
+    <div class="image-wrapper"></div>
+    <div class="image-wrapper"></div>
+  </div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const tooltips = document.querySelectorAll('.tooltip');
+    const images = document.querySelectorAll('.image-wrapper img');
+
+    images.forEach(img => {
+      img.addEventListener('click', (e) => {
+        e.stopPropagation();
+        tooltips.forEach(t => {
+          t.classList.remove('active', 'left', 'right');
+          t.style.top = '';
+        });
+
+        const tooltip = img.nextElementSibling;
+        const imgRect = img.getBoundingClientRect();
+        const tooltipWidth = tooltip.offsetWidth;
+        const tooltipHeight = tooltip.offsetHeight;
+
+        // Ajuster tooltip à gauche ou droite en fonction de la place dispo
+        if (imgRect.right + tooltipWidth + 10 > window.innerWidth) {
+          tooltip.classList.add('left');
+        } else {
+          tooltip.classList.add('right');
+        }
+
+        // Centrer verticalement tooltip par rapport à l’image
+        let top = img.offsetTop + img.offsetHeight / 2 - tooltip.offsetHeight / 2;
+
+        if (top < 0) {
+          top = 0;
+        }
+
+        const maxTop = window.innerHeight - tooltipHeight;
+        const parentOffset = img.offsetParent?.offsetTop || 0;
+        if (top > maxTop) {
+          top = maxTop - parentOffset;
+        }
+
+        tooltip.style.top = `${top}px`;
+        tooltip.classList.add('active');
+      });
+    });
+
+    // Cacher tooltip si clic hors image
+    document.addEventListener('click', () => {
+      tooltips.forEach(t => {
+        t.classList.remove('active', 'left', 'right');
+        t.style.top = '';
+      });
+    });
+  });
+</script>
+</body>
+</html>
